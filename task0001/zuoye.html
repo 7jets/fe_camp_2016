@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bg{
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:-1;
+        }
+        #bg.img {
+            height:100%;
+            width:100%;
+            border:0;
+        }
+        .img-box{
+            width: 400px;
+            height: 330px;
+            margin: 100px 50px;
+            position: relative;
+        }
+        .img-box img{
+            position: absolute;
+            width: 400px;
+            height: 330px;
+            top: 0;
+            left: 0;
+        }
+        .btn-box{
+            height: 30px;
+            width: 150px;
+            position: absolute;
+            top:40%;
+            left:60%;
+        }
+        .btn-box button{
+            position: relative;
+            margin-top: 20px;
+        }
+        #but1,#but2{
+            height: 40px;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+<div id="bg">
+    <img id="img2" src="image/bw-bg.png" />
+</div>
+<div class="img-box">
+    <img id="img" src="image/bw.png"/>
+</div>
+<div class="btn-box">
+    <button id="bw"><img id="but1" src="image/btn-blue-bw.png"></button>
+    <button id="xx"><img id="but2" src="image/btn-gray-xx.png"></button>
+</div>
+
+<script>
+    var btn1=document.getElementById("bw");
+    var btn2=document.getElementById("xx");
+    var img=document.getElementById("img");
+    var img2=document.getElementById("img2");
+    var but1=document.getElementById("but1");
+    var but2=document.getElementById("but2");
+
+    btn1.onclick=function(){
+        img.setAttribute("src","image/bw.png");
+        img2.setAttribute("src","image/bw-bg.png");
+        but1.setAttribute("src","image/btn-blue-bw.png")
+        but2.setAttribute("src","image/btn-gray-xx.png")
+    }
+    btn2.onclick=function(){
+        img.setAttribute("src","image/xx.png");
+        img2.setAttribute("src","image/xx-bg.png");
+        but1.setAttribute("src","image/btn-gray-bw.png")
+        but2.setAttribute("src","image/btn-blue-xx.png")
+    }
+</script>
+</body>
+</html>
